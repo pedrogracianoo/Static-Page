@@ -1,0 +1,130 @@
+/*Normalização dos parametros iniciais.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen", "Courier New", Courier, monospace;
+}
+
+/*Criando paleta de cores*/
+:root {
+  --color-background: #030207;
+  --color-blue: #1474b4;
+}
+
+/*Setando cores do backgroud e do texto*/
+body {
+  background-color: var(--color-background);
+  color: white;
+}
+
+/* Setando cores dos links*/
+a {
+  color: var(--color-blue);
+}
+
+/*Estilizando o bloco principal*/
+.hero {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-background));
+}
+
+/*Configurando Altura x Largura do video*/
+.hero__background {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+  position: absolute;
+}
+
+/*Estilizando o bloco de texto principal*/
+.hero__foreground {
+  text-align: center;
+  padding-top: 45vh;
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.hero__text {
+  margin: 1.5rem;
+}
+
+/*Estilizando textos de apresentação e informativo*/
+.section {
+  text-align: center;
+  padding: 0 8rem;
+  overflow: hidden;
+}
+
+.section__title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 2.25rem auto;
+}
+
+/*Estilizando imagens*/
+.section__img,
+.section__img-inline {
+  width: 100%;
+  max-height: 30rem;
+  position: relative;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+.section__text,
+.section__text-inline {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  margin: 4rem auto;
+}
+
+.section__img-inline {
+  float: left;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+  height: 25rem;
+  width: 20rem;
+}
+
+.section__text-inline {
+  text-align: left;
+  margin-top: 6rem;
+}
+
+.section__text-inline > p {
+  margin-top: 1.5rem;
+}
+
+/*Ajustando o angulo de visualização da imagem*/
+.section:nth-child(4) img {
+    object-position: center !important;
+}
+.gallery{
+    height: 100%;
+    padding-top: 2rem;
+}
+.gallery__img{
+    height: 16rem;
+    width: 16rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.gallery__img-wrapper + .gallery__img-wrapper{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.footer{
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
